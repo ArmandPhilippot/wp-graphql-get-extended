@@ -1,0 +1,59 @@
+# Copyright (C) 2021 WP GraphQL Get Extended
+# This file is distributed under the same license as the WP GraphQL Get Extended package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP GraphQL Get Extended\n"
+"Report-Msgid-Bugs-To: https://github.com/ArmandPhilippot/wp-graphql-get-"
+"extended/issues\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Armand Philippot <contact@armandphilippot.com>\n"
+"Language-Team: Armand Philippot <contact@armandphilippot.com>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
+"_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
+"esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: ../includes/class-wp-graphql-get-extended.php:54
+msgid ""
+"Adds a WP GraphQL field that replicate get_extended() function behavior."
+msgstr ""
+"Ajoute un champs dans WP GraphQL qui réplique le comportement de la "
+"fonction get_extended()."
+
+#: ../includes/class-wp-graphql-get-extended.php:91
+msgid "The get_extended content parts."
+msgstr "Les parties du contenu obtenus par get_extended."
+
+#: ../includes/class-wp-graphql-get-extended.php:92
+msgid "The get_extended content part before more tag."
+msgstr "Le contenu avant la balise more obtenu par get_extended."
+
+#: ../includes/class-wp-graphql-get-extended.php:93
+msgid "The get_extended content part after more tag."
+msgstr "Le contenu après la balise more obtenu par get_extended."
+
+#: ../includes/class-wp-graphql-get-extended.php:94
+msgid "Format of the field output"
+msgstr "Format de sortie du champs."
+
+#: ../includes/class-wp-graphql-get-extended.php:149
+msgid "The content parts."
+msgstr "Les parties du contenu."
+
+#: ../includes/partials/wp-graphql-get-extended-error-notice.php:14
+msgid ""
+"WPGraphQL plugin need to be installed and activated in order for WP GraphQL "
+"Get Extended to work."
+msgstr ""
+"WPGraphQL doit être installé et activé pour que WP GraphQL Get Extended "
+"fonctionne."
