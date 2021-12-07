@@ -1,0 +1,46 @@
+<?php
+/**
+ * WP GraphQL Get Extended
+ *
+ * Plugin definition.
+ *
+ * @package   WP_GraphQL_Get_Extended
+ * @link      https://github.com/ArmandPhilippot/wp-graphql-get-extended
+ * @author    Armand Philippot <contact@armandphilippot.com>
+ *
+ * @copyright 2021 Armand Philippot
+ * @license   GPL-2.0-or-later
+ * @since     0.1.0
+ *
+ * @wordpress-plugin
+ * Plugin Name:       WP GraphQL Get Extended
+ * Plugin URI:        https://github.com/ArmandPhilippot/wp-graphql-get-extended#readme
+ * Description:       Adds a WP GraphQL field that replicate get_extended() function behavior.
+ * Author:            Armand Philippot
+ * Author URI:        https://www.armandphilippot.com
+ * Text Domain:       wpg-get-extended
+ * Domain Path:       /languages
+ * Version:           0.1.0
+ * Requires at least: 5.2
+ * Requires PHP:      7.3
+ */
+
+// If this file is called directly, abort.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+/*
+ * Currently plugin version.
+ */
+define( 'WP_GRAPHQL_GET_EXTENDED_VERSION', '0.1.0' );
+
+/**
+ * Initialize the plugin.
+ *
+ * @since 0.1.0
+ */
+function wp_graphql_get_extended_init() {
+}
+
+wp_graphql_get_extended_init();
