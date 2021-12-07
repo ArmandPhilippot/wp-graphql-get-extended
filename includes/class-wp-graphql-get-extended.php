@@ -83,6 +83,102 @@ class WP_GraphQL_Get_Extended {
 	}
 
 	/**
+	 * Register a new contentPartsType type.
+	 *
+	 * @since 0.1.0
+	 */
+	public function register_content_parts_type_to_graphql() {
+		$type_description        = __( 'The get_extended content parts.', 'wpg-get-extended' );
+		$before_more_description = __( 'The get_extended content part before more tag.', 'wpg-get-extended' );
+		$after_more_description  = __( 'The get_extended content part after more tag.', 'wpg-get-extended' );
+		$format_description      = __( 'Format of the field output', 'wpg-get-extended' );
+
+		register_graphql_object_type(
+			'ContentPartsType',
+			array(
+				'description' => $type_description,
+				'fields'      => array(
+					'beforeMore' => array(
+						'type'        => 'String',
+						'description' => $before_more_description,
+						'args'        => array(
+							'format' => array(
+								'type'        => 'PostObjectFieldFormatEnum',
+								'description' => $format_description,
+							),
+						),
+						'resolve'     => function( $source, $args ) {
+							$content = $source['rendered']['before'];
+							if ( isset( $args['format'] ) && 'raw' === $args['format'] ) {
+								$content = $source['raw']['before'];
+							}
+
+							return $content;
+						},
+					),
+					'afterMore' => array(
+						'type'        => 'String',
+						'description' => $after_more_description,
+						'args'        => array(
+							'format' => array(
+								'type'        => 'PostObjectFieldFormatEnum',
+								'description' => $format_description,
+							),
+						),
+						'resolve'     => function( $source, $args ) {
+							$content = $source['rendered']['after'];
+							if ( isset( $args['format'] ) && 'raw' === $args['format'] ) {
+								$content = $source['raw']['after'];
+							}
+
+							return $content;
+						},
+					),
+				),
+			)
+		);
+	}
+
+	/**
+	 * Register a new contentParts field for Post Type.
+	 *
+	 * @since 0.1.0
+	 */
+	public function add_content_parts_field_to_graphql() {
+		$type        = 'ContentPartsType';
+		$description = __( 'The content parts.', 'wpg-get-extended' );
+
+		register_graphql_field(
+			'ContentNode',
+			'contentParts',
+			array(
+				'type'        => $type,
+				'description' => $description,
+				'resolve'     => function( \WPGraphQL\Model\Post $post_model ) {
+					// phpcs:ignore WordPress.NamingConventions.ValidVariableName
+					$raw_content = $post_model->contentRaw;
+					$raw_content_parts = get_extended( $raw_content );
+
+					// phpcs:ignore WordPress.NamingConventions.ValidVariableName
+					$rendered_content = $post_model->contentRendered;
+					$rendered_content_parts = get_extended( $rendered_content );
+
+					return array(
+						'raw'      => array(
+							'before' => $raw_content_parts['main'],
+							'after'  => $raw_content_parts['extended'],
+						),
+						'rendered' => array(
+							'before' => $rendered_content_parts['main'],
+							'after'  => $rendered_content_parts['extended'],
+						),
+					);
+				},
+			)
+		);
+	}
+
+	/**
 	 * Print an error notice during activation.
 	 *
 	 * @since 0.1.0
@@ -110,6 +206,8 @@ class WP_GraphQL_Get_Extended {
 	public function run() {
 		$this->set_locale();
 		add_action( 'plugins_loaded', array( $this, 'check_plugin_dependencies' ) );
+		add_action( 'graphql_register_types', array( $this, 'register_content_parts_type_to_graphql' ) );
+		add_action( 'graphql_register_types', array( $this, 'add_content_parts_field_to_graphql' ) );
 	}
 
 	/**
