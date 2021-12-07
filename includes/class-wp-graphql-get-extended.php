@@ -83,12 +83,33 @@ class WP_GraphQL_Get_Extended {
 	}
 
 	/**
+	 * Print an error notice during activation.
+	 *
+	 * @since 0.1.0
+	 */
+	public function print_plugin_activation_error() {
+		include_once 'partials/activation/wp-graphql-get-extended-error-notice.php';
+	}
+
+	/**
+	 * Check if WPGraphQL is installed and activated.
+	 *
+	 * @since 0.1.0
+	 */
+	public function check_plugin_dependencies() {
+		if ( ! class_exists( '\WPGraphQL' ) ) {
+			add_action( 'admin_notices', array( $this, 'print_plugin_activation_error' ) );
+		}
+	}
+
+	/**
 	 * Execute the plugin.
 	 *
 	 * @since 0.1.0
 	 */
 	public function run() {
 		$this->set_locale();
+		add_action( 'plugins_loaded', array( $this, 'check_plugin_dependencies' ) );
 	}
 
 	/**

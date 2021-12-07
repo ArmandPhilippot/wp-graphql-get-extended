@@ -25,6 +25,8 @@
  * Requires PHP:      7.3
  */
 
+use WP_GraphQL_Get_Extended\WP_GraphQL_Get_Extended;
+
 // If this file is called directly, abort.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -41,6 +43,10 @@ define( 'WP_GRAPHQL_GET_EXTENDED_VERSION', '0.1.0' );
  * @since 0.1.0
  */
 function wp_graphql_get_extended_init() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wp-graphql-get-extended.php';
+
+	$plugin = new WP_GraphQL_Get_Extended();
+	$plugin->run();
 }
 
 wp_graphql_get_extended_init();
