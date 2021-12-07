@@ -1,0 +1,36 @@
+{
+	"name": "armandphilippot/wp-graphql-get-extended",
+	"description": "Adds a WP GraphQL field that replicate get_extended() function behavior.",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Armand Philippot",
+			"email": "contact@armandphilippot.com",
+			"homepage": "https://www.armandphilippot.com/"
+		}
+	],
+	"homepage": "https://github.com/ArmandPhilippot/wp-graphql-get-extended#readme",
+	"support": {
+		"issues": "https://github.com/ArmandPhilippot/wp-graphql-get-extended/issues",
+		"source": "https://github.com/ArmandPhilippot/wp-graphql-get-extended"
+	},
+	"keywords": [
+		"WordPress",
+		"GraphQL",
+		"plugin"
+	],
+	"type": "wordpress-plugin",
+	"require": {
+		"composer/installers": "^1.0.0 || ^2.0.0"
+	},
+	"require-dev": {
+		"wp-coding-standards/wpcs": "^2.3",
+		"squizlabs/php_codesniffer": "^3.5",
+		"phpcompatibility/phpcompatibility-wp": "^2.1",
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.0"
+	},
+	"scripts": {
+		"lint": "phpcs --standard=phpcs.xml",
+		"fix": "phpcbf --standard=phpcs.xml"
+	}
+}

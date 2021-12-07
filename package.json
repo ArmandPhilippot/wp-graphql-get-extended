@@ -1,0 +1,51 @@
+{
+	"name": "wp-graphql-get-extended",
+	"version": "0.1.0",
+	"description": "Adds a WP GraphQL field that replicate get_extended() function behavior.",
+	"author": "Armand Philippot",
+	"license": "GPL-2.0-or-later",
+	"homepage": "https://github.com/ArmandPhilippot/wp-graphql-get-extended#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ArmandPhilippot/wp-graphql-get-extended.git"
+	},
+	"bugs": {
+		"url": "https://github.com/ArmandPhilippot/wp-graphql-get-extended/issues"
+	},
+	"keywords": [
+		"WordPress",
+		"GraphQL",
+		"plugin"
+	],
+	"scripts": {
+		"bump": "npm-run-all --parallel bump:*",
+		"bump:plugin": "replace-in-file --configFile=tools/bump/php-comment.js",
+		"bump:constant": "replace-in-file --configFile=tools/bump/php-constant.js",
+		"bump:readme": "replace-in-file --configFile=tools/bump/readme.js",
+		"release": "standard-version -a -s",
+		"translate": "node ./tools/translate.js",
+		"zip": "node ./tools/zip.js"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^15.0.0",
+		"@commitlint/config-conventional": "^15.0.0",
+		"@wordpress/browserslist-config": "^4.1.0",
+		"@wordpress/prettier-config": "^1.1.0",
+		"archiver": "^5.3.0",
+		"browserslist": "^4.16.8",
+		"dotenv": "^10.0.0",
+		"dotenv-expand": "^5.1.0",
+		"husky": "^7.0.2",
+		"lint-staged": "^11.1.2",
+		"npm-run-all": "^4.1.5",
+		"prettier": "npm:wp-prettier@^2.2.1-beta-1",
+		"replace-in-file": "^6.2.0",
+		"standard-version": "^9.3.1",
+		"wp-pot": "^1.9.9"
+	},
+	"standard-version": {
+		"scripts": {
+			"postbump": "npm run bump && git add -A"
+		}
+	}
+}
