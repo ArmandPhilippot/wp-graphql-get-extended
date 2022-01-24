@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: WP GraphQL Get Extended\n"
 "Report-Msgid-Bugs-To: https://github.com/ArmandPhilippot/wp-graphql-get-"
 "extended/issues\n"
-"POT-Creation-Date: \n"
+"POT-Creation-Date: 2022-01-24 12:39+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Armand Philippot <contact@armandphilippot.com>\n"
 "Language-Team: Armand Philippot <contact@armandphilippot.com>\n"
@@ -23,37 +23,41 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: ../includes/class-wp-graphql-get-extended.php:54
+#: includes/class-wp-graphql-get-extended.php:53
 msgid ""
 "Adds a WP GraphQL field that replicate get_extended() function behavior."
 msgstr ""
-"Ajoute un champs dans WP GraphQL qui réplique le comportement de la "
-"fonction get_extended()."
+"Ajoute un champs dans WP GraphQL qui réplique le comportement de la fonction "
+"get_extended()."
 
-#: ../includes/class-wp-graphql-get-extended.php:91
+#: includes/class-wp-graphql-get-extended.php:90
 msgid "The get_extended content parts."
 msgstr "Les parties du contenu obtenus par get_extended."
 
-#: ../includes/class-wp-graphql-get-extended.php:92
+#: includes/class-wp-graphql-get-extended.php:91
 msgid "The get_extended content part before more tag."
 msgstr "Le contenu avant la balise more obtenu par get_extended."
 
-#: ../includes/class-wp-graphql-get-extended.php:93
+#: includes/class-wp-graphql-get-extended.php:92
 msgid "The get_extended content part after more tag."
 msgstr "Le contenu après la balise more obtenu par get_extended."
 
-#: ../includes/class-wp-graphql-get-extended.php:94
+#: includes/class-wp-graphql-get-extended.php:93
 msgid "Format of the field output"
-msgstr "Format de sortie du champs."
+msgstr "Format de sortie du champs"
 
-#: ../includes/class-wp-graphql-get-extended.php:149
+#: includes/class-wp-graphql-get-extended.php:148
 msgid "The content parts."
 msgstr "Les parties du contenu."
 
-#: ../includes/partials/wp-graphql-get-extended-error-notice.php:14
+#: includes/partials/wp-graphql-get-extended-error-notice.php:14
+#, fuzzy
+#| msgid ""
+#| "WPGraphQL plugin need to be installed and activated in order for WP "
+#| "GraphQL Get Extended to work."
 msgid ""
-"WPGraphQL plugin need to be installed and activated in order for WP GraphQL "
-"Get Extended to work."
+"WPGraphQL must be installed and activated in order for WP GraphQL Get "
+"Extended to work."
 msgstr ""
 "WPGraphQL doit être installé et activé pour que WP GraphQL Get Extended "
 "fonctionne."

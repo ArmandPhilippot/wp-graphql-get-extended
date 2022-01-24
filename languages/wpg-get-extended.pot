@@ -1,4 +1,4 @@
-# Copyright (C) 2021 WP GraphQL Get Extended
+# Copyright (C) 2022 WP GraphQL Get Extended
 # This file is distributed under the same license as the WP GraphQL Get Extended package.
 msgid ""
 msgstr ""
@@ -16,30 +16,30 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../includes/class-wp-graphql-get-extended.php:54
+#: ../includes/class-wp-graphql-get-extended.php:53
 msgid "Adds a WP GraphQL field that replicate get_extended() function behavior."
 msgstr ""
 
-#: ../includes/class-wp-graphql-get-extended.php:91
+#: ../includes/class-wp-graphql-get-extended.php:90
 msgid "The get_extended content parts."
 msgstr ""
 
-#: ../includes/class-wp-graphql-get-extended.php:92
+#: ../includes/class-wp-graphql-get-extended.php:91
 msgid "The get_extended content part before more tag."
 msgstr ""
 
-#: ../includes/class-wp-graphql-get-extended.php:93
+#: ../includes/class-wp-graphql-get-extended.php:92
 msgid "The get_extended content part after more tag."
 msgstr ""
 
-#: ../includes/class-wp-graphql-get-extended.php:94
+#: ../includes/class-wp-graphql-get-extended.php:93
 msgid "Format of the field output"
 msgstr ""
 
-#: ../includes/class-wp-graphql-get-extended.php:149
+#: ../includes/class-wp-graphql-get-extended.php:148
 msgid "The content parts."
 msgstr ""
 
 #: ../includes/partials/wp-graphql-get-extended-error-notice.php:14
-msgid "WPGraphQL plugin need to be installed and activated in order for WP GraphQL Get Extended to work."
+msgid "WPGraphQL must be installed and activated in order for WP GraphQL Get Extended to work."
 msgstr ""

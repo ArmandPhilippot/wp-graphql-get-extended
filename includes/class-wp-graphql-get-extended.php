@@ -12,8 +12,7 @@ namespace WP_GraphQL_Get_Extended;
 /**
  * The core plugin class.
  *
- * This class defines defines internationalization, admin hooks, and public
- * hooks.
+ * This class defines internationalization, admin hooks, and public hooks.
  */
 class WP_GraphQL_Get_Extended {
 
@@ -184,7 +183,7 @@ class WP_GraphQL_Get_Extended {
 	 * @since 0.1.0
 	 */
 	public function print_plugin_activation_error() {
-		include_once 'partials/activation/wp-graphql-get-extended-error-notice.php';
+		include_once 'partials/wp-graphql-get-extended-error-notice.php';
 	}
 
 	/**

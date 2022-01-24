@@ -11,5 +11,5 @@
 
 ?>
 <div class="notice notice-error">
-	<p><?php esc_html_e( 'WPGraphQL plugin need to be installed and activated in order for WP GraphQL Get Extended to work.', 'wpg-get-extended' ); ?></p>
+	<p><?php esc_html_e( 'WPGraphQL must be installed and activated in order for WP GraphQL Get Extended to work.', 'wpg-get-extended' ); ?></p>
 </div>
