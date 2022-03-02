@@ -10,7 +10,7 @@ const packageJson = JSON.parse( fs.readFileSync( './package.json' ) );
 const packageVersion = packageJson.version;
 
 module.exports = {
-	files: 'wp-graphql-extended.php',
+	files: 'wp-graphql-get-extended.php',
 	from: new RegExp(
 		"_VERSION', '(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?",
 		'g'
