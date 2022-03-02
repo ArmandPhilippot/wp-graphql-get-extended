@@ -1,6 +1,6 @@
 {
 	"name": "wp-graphql-get-extended",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Adds a WP GraphQL field that replicate get_extended() function behavior.",
 	"author": "Armand Philippot",
 	"license": "GPL-2.0-or-later",
