@@ -18,14 +18,10 @@ This plugin allows you to retrieve this two parts for each posts including Custo
 
 ```graphql
 query SinglePost($slug: String!) {
-	posts {
-		edges {
-			node {
-				contentParts {
-					beforeMore(format: RAW)
-					afterMore
-				}
-			}
+	postBy(slug: $slug) {
+		contentParts {
+			beforeMore(format: RAW)
+			afterMore
 		}
 	}
 }
